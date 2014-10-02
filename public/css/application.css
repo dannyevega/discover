@@ -28,3 +28,8 @@
   float: right;
   padding-bottom: 13px;
 }
+
+#artist-info{
+  color: white;
+  background-color: red;
+}
