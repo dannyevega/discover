@@ -1,0 +1,27 @@
+
+  <div class="container bob-img">
+
+    <div class="row">
+
+      <a href="/users/new"><h1 style="color: white">Sign Up</h1></a>
+
+      <% if @error %>
+        <div class="errors"><%= @error %></div>
+      <% end %>
+
+      <form id="sign-in" method="post" action="/sessions">
+        <div class="small-4 small-offset-6 columns">
+          <label class="label" for="email">Email</label>
+          <input type="email" name="email" placeholder="email address" value="<%= @email %>"><br>
+        </div>
+        <div class="small-4 small-offset-6 columns">
+          <label class="label" for="password">Password</label>
+          <input type="password" name="password" placeholder="password - must be 6 or more characters">
+        </div>
+        <br>
+        <input type="submit" value="Sign In">
+      </form>
+
+    </div>
+
+  </div>
