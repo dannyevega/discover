@@ -7,23 +7,18 @@ $(document).ready(function() {
       type: 'get',
       data: $(this).serialize()
     }).done(function(response){
-      // console.log(response)
-
+      // displays image
       var imageUrl = response.artist.image[3]["#text"]
-
       $('#artist-image').html('<img src="'+ imageUrl +'"/>')
 
-      // console.log(response.artist.bio.content);
-
+      // displays artists bio
       var artistInfo = response.artist.bio.content
-      console.log(artistInfo)
-
       $('#artist-info').html('<p>'+ artistInfo +'</p>')
 
-      console.log(response.artist.url)
-
+      // displays artist lastfm url
       var listenFmUrl = response.artist.url
-      $('#artist-listen-url').html("listenFmUrl")
+      console.log(listenFmUrl)
+      $('#artist-listen-url').html("<a href='" + listenFmUrl + "'>Artist's LastFM</a>")
     })
   })
 });
