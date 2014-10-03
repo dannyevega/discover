@@ -24,7 +24,53 @@
 }
 
 #button {
-  padding-top: 20px;
-  float: right;
-  padding-bottom: 13px;
+  padding-top: 10px;
+  float: left;
+  padding-bottom: 10px;
+}
+
+#search {
+  float: left;
+}
+
+.headline {
+  visibility: hidden;
+}
+
+#artist-image {
+  text-align: center;
+}
+
+#similar-artists {
+  list-style: none;
+  background-color: white;
+  background-color:rgba(0,0,255,0.5);
+  padding-left: 15px;
+  border-radius: 5%;
+}
+
+#top-albums {
+  list-style: none;
+  background-color: white;
+  background-color:rgba(0,0,255,0.5);
+  padding-left: 15px;
+  border-radius: 5%;
+}
+
+#artist-info {
+  background-color: white;
+  background-color:rgba(0,0,255,0.5);
+  padding-left: 15px;
+  border-radius: 5%;
+}
+
+#artist-listen-url {
+  background-color: white;
+  background-color:rgba(0,0,255,0.5);
+  padding-left: 15px;
+  border-radius: 5%;
+}
+
+.poop {
+  color: red;
 }

@@ -1,19 +1,16 @@
-<div class="container man-img">
+<body class="container man-img">
+
   <div class="row">
-
     <div class="large-12 columns">
-
       <div class="left">
         <h1 style="color: #1E90FF">discover.</h1>
       </div>
-
       <div class="right">
         <form id="button"action="/sessions/<%= current_user %>" method="post">
           <input name="_method" type="hidden" value="delete" />
-          <input type="submit" value="Sign Out">
+          <button id="button" type="submit" value="Sign Out">Sign Out</button>
         </form>
       </div>
-
     </div>
   </div>
 
@@ -22,19 +19,27 @@
   </div>
 
   <div class="row">
-    <div class="large-4 columns">
-      <h4>Learn more about an artist:</h4>
 
-      <p>
+    <aside id="search">
+      <h4 class="headline">Learn more about an artist:</h4>
         <form id="searchbar">
-          <input type="text" name="artist">
-          <input type="submit" value="Search">
-        </form>
+          <input id="artist_input" type="text" name="artist" placeholder="learn more about an artist..." required>
+          <button id="button" type="submit" value="Search">Search</button>
+        </form><br><br><br><br><br>
+        <span id="similar-artist-header"></span>
+        <ul id="similar-artists"></ul>
+        <span id="top-albums-header"></span>
+        <ul id="top-albums"></ul>
+    </aside>
 
-      </p>
+    <div class="large-8 columns">
+        <p id="artist-image"></p>
+        <p id="artist-info"></p>
+        <p id="artist-listen-url"></p>
+    </div>
 
-      <p id="artist-image"></p>
-      <p id="#artist-info"></p>
-      <p id="#artist-listen-url"></p>
+  </div>
 
-</div>
+
+
+</body>

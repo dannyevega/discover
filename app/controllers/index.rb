@@ -46,7 +46,11 @@ delete '/sessions/:id' do
 end
 
 get '/artists/info' do
-  response = HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=#{params[:artist]}&api_key=2f92db75c90c73893b9ffa855cad72d8&format=json")
   content_type :json
-  response.to_json
+  artist = params[:artist].gsub(" ", "+")
+  artist_info = {
+    background: HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=#{artist}&api_key=2f92db75c90c73893b9ffa855cad72d8&format=json"),
+    similar: HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=#{artist}&api_key=2f92db75c90c73893b9ffa855cad72d8&format=json"),
+    albums: HTTParty.get("http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=#{artist}&api_key=2f92db75c90c73893b9ffa855cad72d8&format=json")
+  }.to_json
 end
