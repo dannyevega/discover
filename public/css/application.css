@@ -52,21 +52,21 @@
 #top-albums {
   list-style: none;
   background-color: white;
-  background-color:rgba(0,0,255,0.5);
+  background-color:rgba(0,0,250,0.5);
   padding-left: 15px;
   border-radius: 5%;
 }
 
 #artist-info {
   background-color: white;
-  background-color:rgba(0,0,255,0.5);
+  background-color:rgba(0,0,250,0.5);
   padding-left: 15px;
   border-radius: 5%;
 }
 
 #artist-listen-url {
   background-color: white;
-  background-color:rgba(0,0,255,0.5);
+  background-color:rgba(0,0,250,0.5);
   padding-left: 15px;
   border-radius: 5%;
 }
